@@ -1,18 +1,18 @@
-Enhances [express-handlebars](https://github.com/ericf/express-handlebars) to support read hanblebars files from memory
+增强 [express-handlebars](https://github.com/ericf/express-handlebars) 以便支持从内存中读取handlebars文件
 ========================================
 
-Installation
+安装
 ------------
-You must be running express, express-handlebars, webpack, webpack-dev-middleware on node.
+你的应用需要是一个使用 express, express-handlebars, webpack, webpack-dev-middleware 的 node 应用.
 
-Install the plugin with npm:
+npm 安装:
 ```shell
 $ npm install --save-dev express-handlebars-memory-fs
 ```
 
-Usage
+使用
 -----------
-Use the plugin in your node server.js:
+使用此插件在node服务文件中：
 ```javascript
 const express = require('express');
 const webpackDevMiddleware = require("webpack-dev-middleware");
@@ -32,8 +32,8 @@ app.use(webpackDevMiddleware(compiler, {
 expressHandlebarsMemoryFs(compiler.outputFileSystem);
 ```
 
-This plugin does not do anything in the following cases.
+这个插件在以下情况将不会做任何事情
 
-1、It will do anything if in a production environment(process.env.NODE_ENV === 'production')
+1、生产环境(process.env.NODE_ENV === 'production')下不支持任何更改
 
-2、It will do anything if the parameter `memoryFs` is not instance of `MemoryFileSystem`
+2、参数`memoryFs` 不是 `MemoryFileSystem` 的实例
