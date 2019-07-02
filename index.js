@@ -31,7 +31,7 @@ function ExpressHandlebarsMemoryFs(memoryFs) {
     }
 
     // <path>/index.<ext>
-    viewPath = path.join(dir, basename(file, ext), 'index' + ext);
+    viewPath = path.join(dir, path.basename(file, ext), 'index' + ext);
     viewStat = tryStat(viewPath);
 
     if (viewStat && viewStat.isFile()) {
