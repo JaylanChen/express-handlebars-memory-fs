@@ -1,7 +1,6 @@
 'use strict';
 
 const path = require('path');
-const MemoryFileSystem = require('memory-fs');
 const View = require("express/lib/view");
 const ExpressHandlebars = require("express-handlebars/lib/express-handlebars");
 
@@ -11,12 +10,6 @@ function ExpressHandlebarsMemoryFs(memoryFs) {
   }
   if (!memoryFs) {
     throw new Error('express-handlebars-memory-fs expects 1 arguments, webpack outputFileSystem. such as: `compiler.outputFileSystem`.');
-  }
-
-  const isMemoryFs = memoryFs instanceof MemoryFileSystem;
-  if (!isMemoryFs) {
-    console.warn('current webpack outputFileSystem is not MemoryFileSystem, express-handlebars-memory-fs will not do anything.');
-    return;
   }
 
   const viewResolve = View.prototype.resolve;

@@ -1,6 +1,8 @@
 Enhances [express-handlebars](https://github.com/ericf/express-handlebars) to support read hanblebars files from memory
 ========================================
 
+P.S：webpack 4.x please use version 1.x
+
 Installation
 ------------
 You must be running express, express-handlebars, webpack, webpack-dev-middleware on node.
@@ -35,5 +37,3 @@ expressHandlebarsMemoryFs(compiler.outputFileSystem);
 This plugin does not do anything in the following cases.
 
 1、It will do anything if in a production environment(process.env.NODE_ENV === 'production')
-
-2、It will do anything if the parameter `memoryFs` is not instance of `MemoryFileSystem`

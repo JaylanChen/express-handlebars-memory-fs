@@ -1,6 +1,6 @@
 {
   "name": "express-handlebars-memory-fs",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Enable Express-handlebars to support read handlebars files from memory.",
   "main": "index.js",
   "files": [
@@ -27,9 +27,9 @@
   },
   "homepage": "https://github.com/JaylanChen/express-handlebars-memory-fs",
   "dependencies": {
-    "express": "^4.16.4",
-    "express-handlebars": "^3.0.2",
-    "webpack": "^4.30.0",
-    "webpack-dev-middleware": "^3.6.2"
+    "express": "^4.17.1",
+    "express-handlebars": "^5.2.0",
+    "webpack": "^5.9.0",
+    "webpack-dev-middleware": "^4.0.2"
   }
 }
